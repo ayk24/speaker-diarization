@@ -1,6 +1,6 @@
-# Speech Diarization
+# Speaker Diarization
 ## Overview
-This is a simple speech diarization script using `pyannote.audio`.
+This is a simple speaker diarization script using `pyannote.audio`.
 
 ## Requirements
 - Python 3.9+
