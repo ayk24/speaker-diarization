@@ -6,15 +6,16 @@ authors = ["ayk24 <aykueym@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.12"
 torch = "^2.1.0"
 torchaudio = "^2.1.0"
 speechbrain = "^0.5.15"
 onnxruntime = "^1.16.1"
-pyannote-audio = {path = "pyannote-audio"}
-polars = "^0.19.9"
+pyannote-audio = "^3.0.1"
+pandas = "^2.1.1"
 pydub = "^0.25.1"
 python-dotenv = "^1.0.0"
+logzero = "^1.7.0"
 
 
 [tool.poetry.group.dev.dependencies]
