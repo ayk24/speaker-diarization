@@ -13,7 +13,7 @@ ENV_PATH = Path(ROOT_DIR, ".env")
 AUDIO_PATH = Path(ROOT_DIR, "data/audio.wav")
 OUTPUT_DIARIZATION_PATH = Path(ROOT_DIR, "data/diarization.txt")
 HF_TOKEN = os.environ.get("HF_TOKEN")
-NUM_SPEAKERS = 9
+NUM_SPEAKERS = 5
 
 
 class SpeakerDiarization:
@@ -46,7 +46,7 @@ class SpeakerDiarization:
                 start = segment["start"] * 1000
                 end = segment["end"] * 1000
                 duration = start - previous_end
-                audio_segment_each_speaker += AudioSegment.silent(duration=duration)
+                audio_segment_each_speaker += audio_segment[previous_end:start] - 12
                 audio_segment_each_speaker += audio_segment[start:end]
                 previous_end = end
                 logger.info(f"dur={duration:.1f}s start={start:.1f}s end={end:.1f}s")
