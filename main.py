@@ -19,7 +19,7 @@ NUM_SPEAKERS = 9
 class SpeakerDiarization:
     def __init__(self) -> None:
         """Initialize SpeakerDiarization class."""
-        self.pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization")
+        self.pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.0", use_auth_token=HF_TOKEN)
 
     def run_diarization(self) -> None:
         """Run speaker diarization."""
