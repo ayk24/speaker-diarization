@@ -49,7 +49,6 @@ class SpeakerDiarization:
                 audio_segment_each_speaker += audio_segment[previous_end:start] - 12
                 audio_segment_each_speaker += audio_segment[start:end]
                 previous_end = end
-                logger.info(f"dur={duration:.1f}s start={start:.1f}s end={end:.1f}s")
 
             audio_segment_each_speaker += audio_segment[previous_end:]
 
